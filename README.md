@@ -37,3 +37,13 @@ Operation
 
 * Turns off the M-Bus, cleans up and exits.
 
+Errors
+======
+
+If you have been using the serial port using other software you may get a warning that the serial channel is already in use.  You can suppress the warning by adding:
+
+```
+GPIO.setwarnings(False) 
+```
+
+You may find that the bus needs to be left powered longer than 0.1s (the default in the script) to allow successful reads of the bus.  This is likely to be more prevalent in bus powered meters, as they need some time to power on and stabilise after the bus is powered.
