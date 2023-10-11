@@ -8,9 +8,7 @@ Setup
 
 ```
 sudo apt install python-pip
-git clone https://github.com/ganehag/pyMeterBus
-cd pyMeterBus & sudo python setup.py install & cd ..
-sudo python setup.py install
+pip install -r requirements.txt
 ```
 
 Also, if this is the first time using the M-Bus Master Hat, follow the installation instructions [here](https://www.packom.net/m-bus-master-hat-instructions/).
