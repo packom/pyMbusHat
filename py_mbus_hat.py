@@ -43,7 +43,7 @@ GPIO.output(mbus_gpio_bcm, GPIO.HIGH)
 time.sleep(.1)  # Pause briefly to allow the bus time to power up
 
 # Read data from slave
-ser = serial.Serial(serial_dev, baud_rate, 8, 'E', 1, 0.5)
+ser = serial.Serial(serial_dev, baud_rate, 8, 'E', 1, 0.55)
 try:
   meterbus.send_ping_frame(ser, slave_address)
   frame = meterbus.load(meterbus.recv_frame(ser, 1))
